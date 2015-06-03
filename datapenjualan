@@ -1,0 +1,34 @@
+public class DataPenjualan
+{
+	public static void main (String []argc)
+	{
+		String [] hari = {"Senin","Selasa","Rabu","Kamis","Jumat","Sabtu","Minggu"};
+		String[] brg = {"Pencil       ","Buku Gambar ","Buku     ","Penghapus"};
+		int Omsetbrg = 0;
+		//int [][] datajual= new int[brg.length][hari.length];
+		int[][] datajual = {
+				{3,2,12,9,10,6,7},
+				{5,10,8,5,4,12,3},
+				{8,6,7,5,4,12,3},
+				{9,2,4,11,8,10,3}
+				};
+				
+		System.out.println("Data Penjualan");
+		System.out.print("Brg-hari\t");
+		for (int i=0; i<hari.length;i++)
+		{
+			System.out.print(hari[i] + "\t");
+		}
+		System.out.println("Total");
+		for (int baris = 0; baris<datajual.length; baris++){
+			System.out.print(brg[baris] + "\t");
+			for (int kolom = 0;kolom <datajual[baris].length; kolom++){
+				System.out.print(datajual[baris][kolom] + "\t");
+				
+				Omsetbrg +=datajual[baris][kolom];
+			}
+			System.out.println(Omsetbrg);
+		}
+	}
+
+}
