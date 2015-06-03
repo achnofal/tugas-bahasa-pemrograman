@@ -1,0 +1,153 @@
+import java.io.*;
+import java.util.*;
+
+class CariMahasiswa
+{
+	public static void main(String []args) throws Exception
+	{BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String data[][]=
+	{{"08410100375","Purwanto",},
+    {"10410100146","Noer Hidayat"},
+    {"10410100162","Sandy Perdana"},
+    {"11410100142","Himawan Pradipta Utama"},
+    {"12410100049","Sujatmiko Hadinugroho"},
+    {"12410100070","Denny Kusuma"},
+    {"12410100088","Mochammad Afri Fitriansyah"},
+    {"12410100131","Pradita Satria Prima"},
+    {"12410100159","Fajriyan Nurli"},
+    {"12410100160","Hazvi Fahlevi"},
+    {"13410100006","Nico Stephanus Kuncoro"},
+    {"13410100007","Ramdhani Kurniawan"},
+    {"13410100048","Alanvianto Mukti Tamtomo"},
+    {"13410100049","Satryo Widodo"},
+    {"13410100058","Khamim Ahsanu Amala"},
+    {"13410100060","Arfiansyah Agma"},
+    {"13410100061","Candra Dwi Prasetya"},
+    {"13410100069","Mohammad Rangga Nurcahyo"},
+    {"13410100083","Raymond Andreas Soebijantoro"},
+    {"13410100153","Dwiki Rizwan Nizar"},
+    {"13410100155","Anggy Pranindya Sudarmadji"},
+    {"13410100157","Wahyu Alfiyanda"},
+    {"13410100180","Rayana Suryatama"},
+    {"13410100190","Bryan Asril Zani"},
+    {"13410100192","Eko Amiyantho"},
+    {"13410100200","Kristin Lebdaningrum"},
+    {"13410100206","RB. Nuriana Alim Putra"},
+    {"13410100216","Sabdo Wicaksono Putra"},
+    {"14410100170","Rizky Akbar"},
+    {"14410100172","Abdul Haris"},
+    {"14410100173","Ach Nofal Kurniawan"},
+    {"14410100174","Andri Anggara"},
+    {"14410100175","Auda Rizqi Aulany"},
+    {"14410100176","Noppy Wahyono Suwoto"},
+    {"14410100177","Arya Teja"},
+    {"14410100178","Nuari Imas Masita"},
+    {"14410100179","Afif Lutfian Fahmi Chudlori"},
+    {"14410100181","Novita Perdani"},
+    {"14410100182","Dheta Amelya Kurniawendy"}
+  };
+	int pil = 0;
+	String nama = "";
+	String nim = "";
+	String hapus="";
+		
+  do
+  {
+	  System.out.println("=====================================");
+	  System.out.println("         Cari Data Mahasiswa         ");
+	  System.out.println("=====================================");
+	  System.out.println("1. Cari Berdasarkan Nama");
+	  System.out.println("2. Cari Berdasarkan NIM");
+	  System.out.println("3. Filter Berdasarkan Nama");
+	  System.out.println("4. Filter Berdasarkan NIM");
+	  System.out.println("5. View all Data");
+	  System.out.println("6. Delete Data");
+	  System.out.println("7. Keluar");
+	  System.out.print("Masukkan Data yang dipilih (1-7) : ");
+	  pil = Integer.parseInt(br.readLine());
+	  
+	  switch(pil)
+	  {
+		case 1 : 
+		System.out.println("=====================================");
+		System.out.println("     Cari Data Mahasiswa By Nama     ");
+		System.out.println("=====================================");
+		System.out.print("Input Nama : ");
+		nama = br.readLine();
+		for(int i=0;i<data.length;i++)
+		{
+			if(nama.equalsIgnoreCase(data[i][1]))
+			{
+				System.out.println("NIM : "+data[i][0]);
+			}
+		}
+		break ;
+		
+		case 2 : 
+		System.out.println("=====================================");
+		System.out.println("     Cari Data Mahasiswa By NIM      ");
+		System.out.println("=====================================");
+		System.out.print("Input NIM : ");
+		nim = br.readLine();
+		for(int y=0;y<data.length;y++)
+		{
+			if(nim.equalsIgnoreCase(data[y][0]))
+			{
+				System.out.println("Nama : "+data[y][1]);
+			}
+		}
+		break ; 
+		
+		case 3 : 
+		System.out.println("=====================================");
+		System.out.println("    Filter Data Mahasiswa By Nama    ");
+		System.out.println("=====================================");
+		System.out.print("Input Nama : ");
+		nama = br.readLine();
+		for(int j=0;j<data.length;j++)
+		{
+			if(nama.equalsIgnoreCase(data[j][1]))
+			{
+				System.out.println("NIM : "+data[j][0]);
+				System.out.println("Muncul Pada data ke : "+j);
+			}
+		}
+		break ; 
+		
+		case 4 : 
+		System.out.println("=====================================");
+		System.out.println("     Cari Data Mahasiswa By Nama     ");
+		System.out.println("=====================================");
+		System.out.print("Input NIM : ");
+		nim = br.readLine();
+		for(int q=0;q<data.length;q++)
+		{
+			if(nim.equalsIgnoreCase(data[q][0]))
+			{
+				System.out.println("Nama : "+data[q][1]);
+				System.out.println("Muncul pada data ke : "+q);
+			}
+		}
+		break ;
+		case 5 :
+		System.out.println("=====================================");
+		System.out.println("     Cari Data Mahasiswa By Nama     ");
+		System.out.println("=====================================");
+		for(int l=0;l<data.length;l++)
+		{
+			System.out.println("| "+data[l][0]+" | | "+data[l][1]+" |");
+		}
+		break;
+		case 6 :
+		System.out.println("=====================================");
+		System.out.println("     Cari Data Mahasiswa By Nama     ");
+		System.out.println("=====================================");
+			
+		break;
+		
+		default:break;
+	  }
+  }
+  while(pil<7);
+	}
+}
