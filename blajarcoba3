@@ -1,0 +1,30 @@
+import java.io.*;
+class daftarbarang
+{
+	public static void main(String args[]) throws Exception
+	{BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+	
+		System.out.println("=============================");
+		System.out.println("  \"   daftar barang \"         ");
+		System.out.println("================================");
+		System.out.println("Inputkan nama barang=");
+		String nb=(br.readLine());
+		System.out.println("Inputkan jumlah barang=");
+		int jb=Integer.parseInt(br.readLine());
+		System.out.println("Inputkan harga barang=");
+		int hb=Integer.parseInt(br.readLine());
+		System.out.println("=============================");
+		System.out.println("    \"  daftar barang \"         ");
+		System.out.println("================================");
+		System.out.println("outputkan semua data yang telah di inputkan");
+		int htotal=hb*jb;
+		
+		System.out.println("nama barang="+nb);
+		System.out.println("jumlah barang="+jb);
+		System.out.println("harga barang="+hb);
+		System.out.println("total="+htotal);
+		
+		
+	}
+	
+}
