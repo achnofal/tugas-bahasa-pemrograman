@@ -1,0 +1,33 @@
+import java.io.*;
+class tokosepatu
+{
+	public static void main (String args[] ) throws Exception
+	{BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+	
+		System.out.println("=====================================");
+		System.out.println("\"tokosepatu\"");
+		System.out.println("=====================================");
+		System.out.println("Inputkan merk barang=");
+		String mb=(br.readLine());
+		System.out.println("Inputkan jumlah barang=");
+		int jb=Integer.parseInt(br.readLine());
+		System.out.println("Inputkan harga barang");
+		int hb=Integer.parseInt(br.readLine());
+		System.out.println("=====================================");
+		System.out.println("\"tokodepatu\"");
+		System.out.println("=====================================");
+		System.out.println("Outputkan semua data yang telah di inputkan");
+		int htotal=hb*jb;
+		
+		
+		System.out.println("merk barang="+mb);
+		System.out.println("jumlah barang="+jb);
+		System.out.println("harga barang="+hb);
+		System.out.println("total="+htotal);
+		
+		
+		
+	
+		
+	}
+}
